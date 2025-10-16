@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bacteria Recognition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- 主要內容區 -->
+        <div class="content">
+
+
+       <!-- 1.左欄：攝影機畫面 -->
+         <!-- 1.左欄：攝影機畫面 -->
+            <div class="video-section">
+                <div class="video-container">
+                    <!-- 用 video 元素直接顯示攝像頭 -->
+                    <video id="videoElement" autoplay playsinline></video>
+                    
+                    <!-- 用於繪製偵測框的 canvas -->
+                    <canvas id="overlayCanvas"></canvas>
+                    
+                    <!-- 隱藏的 canvas 用於擷取畫面 -->
+                    <canvas id="captureCanvas" style="display: none;"></canvas>
+
+                    <!-- 狀態顯示 -->
+                    <div class="video-overlay">
+                        <div class="status-indicator">
+                            <span class="status-dot"></span>
+                            <span class="status-text" id="statusText">初始化中...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+       <!-- 2.右欄：辨識結果條 -->
+         <!-- 2.右欄：辨識結果條 -->
+            <div class="results-section">
+                <div class="results-header">
+                    <h2>辨識結果</h2>
+                </div>
+                
+                <div class="results-list" id="resultsList">
+                    <div class="empty-state">
+                        <div class="empty-icon">🔍</div>
+                        <p>載入中...</p>
+                        <small>正在初始化模型類別</small>
+                    </div>
+                </div>
+            </div>
+
+        <div>
+    </div>
+    <!-- 3.連接ＪＳ主程式 -->
+    
+      <script src="script.js"></script>
+
+</body>
+</html>
